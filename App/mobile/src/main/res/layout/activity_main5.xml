@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main5Activity">
+
+    <TextView
+        android:id="@+id/text51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/translation1"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:id="@+id/layout51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/text51">
+
+        <Button
+            android:id="@+id/button51"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="8dp"
+            android:background="#000000"
+            android:onClick="onButtonClickName51"
+            android:text="English"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/speaker_button52"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="46dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:onClick="onButtonClickName52"
+            android:src="@mipmap/ico_mic_round"
+            app:srcCompat="@mipmap/ico_mic_round" />
+
+        <Button
+            android:id="@+id/button53"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:onClick="onButtonClickName53"
+            android:text="中文"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+</RelativeLayout>

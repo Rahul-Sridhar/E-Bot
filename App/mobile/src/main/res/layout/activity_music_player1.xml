@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Music_player1">
+
+    <TextView
+        android:id="@+id/music_played"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:id="@+id/music_control_layout">
+
+        <ImageView
+            android:id="@+id/music_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="prev"
+            app:srcCompat="@android:drawable/ic_media_previous"
+            android:src="@android:drawable/ic_media_previous"/>
+
+        <ImageView
+            android:id="@+id/music_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="stop"
+            app:srcCompat="?android:attr/detailsElementBackground"
+            android:src="?android:attr/detailsElementBackground"/>
+
+        <ImageView
+            android:id="@+id/music_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="play"
+            app:srcCompat="@android:drawable/ic_media_play"
+            android:src="@android:drawable/ic_media_play"/>
+
+        <ImageView
+            android:id="@+id/music_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="pause"
+            app:srcCompat="@android:drawable/ic_media_pause"
+            android:src="@android:drawable/ic_media_pause"/>
+
+        <ImageView
+            android:id="@+id/music_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="next"
+            app:srcCompat="@android:drawable/ic_media_next"
+            android:src="@android:drawable/ic_media_next"/>
+
+    </LinearLayout>
+
+</LinearLayout>

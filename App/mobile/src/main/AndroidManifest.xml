@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.sairahul5223.e_bot">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/e_bot"
+        android:label="@string/translation0"
+        android:roundIcon="@mipmap/e_bot_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:node="replace">
+        <activity
+            android:name=".MainActivity" />
+        <activity
+            android:name=".Main2Activity" />
+        <activity
+            android:name=".Main3Activity" />
+        <activity android:name=".Main4Activity" />
+        <activity
+            android:name=".Main5Activity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Music_player1"
+            android:theme="@style/AppTheme.CustomTheme">
+
+        </activity>
+    </application>
+
+</manifest>
