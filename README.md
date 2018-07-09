@@ -21,4 +21,4 @@ A python script runs on the Remote Server which runs a deep learning model to pr
 
 The E-Bot interface is developed on Android Studio using Java and deployed on Android Phone.
 
-![alt text](https://github.com/Rahul-Sridhar/E-Bot/blob/master/Images/2.png)
+![alt text](https://github.com/Rahul-Sridhar/E-Bot/blob/master/Images/E-Bot%20Interface%20dataflow.png)
