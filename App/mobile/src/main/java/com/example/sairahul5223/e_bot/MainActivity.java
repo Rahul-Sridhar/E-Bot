@@ -162,6 +162,7 @@ public class MainActivity extends Activity {
         });
     }
 
+    // This function is executed when the user selects the arrow button after entering the name
     public void onButtonClickName11(View v){
         ImageButton ib1=findViewById(R.id.imageButton14);
         ib1.setColorFilter(Color.BLACK, PorterDuff.Mode.LIGHTEN);
@@ -176,6 +177,7 @@ public class MainActivity extends Activity {
 
     }
 
+    // This function on execution causes the robot to greet user
     public class httpAsyncTask11 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -222,6 +224,7 @@ public class MainActivity extends Activity {
     }
 
 
+    // Converts the text to the given language and displays it
     private void translator(int a, int b, String help){
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
@@ -237,6 +240,7 @@ public class MainActivity extends Activity {
         }
     }
 
+    // Displays the text based on the language set as soon as the activity appears on the app
     private void updateViews() {
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
@@ -249,6 +253,7 @@ public class MainActivity extends Activity {
         setTitle(resources.getString(R.string.main_activity_toolbar_title));
     }
 
+    // This function sets the language of communication for the robot
     public class httpAsyncTask415 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -277,6 +282,7 @@ public class MainActivity extends Activity {
 
     }
 
+    // This function sends the name of the song to be deleted as a parameter of the URL
     public class httpAsyncTask416 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -307,6 +313,7 @@ public class MainActivity extends Activity {
 
     }
 
+    // This function sends a song  from the Android Phone to the Raspberry Pi
     public class httpAsyncTask417 extends AsyncTask<String, Void, Void> {
 
 
@@ -368,6 +375,7 @@ public class MainActivity extends Activity {
         }
     }
 
+    // Override function which executes a set of statements based on voice input from the user
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -393,6 +401,7 @@ public class MainActivity extends Activity {
         }
     }
 
+    // This function return the translated text
     private String translator_return(int b){
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
@@ -400,13 +409,13 @@ public class MainActivity extends Activity {
         return str20;
     }
 
+    // Override methods for the working of settings (Edit Language, Edit Playlist, Edit Help number)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.settings_menu, menu);
         return true;
     }
-
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         if(Build.VERSION.SDK_INT > 11) {
@@ -417,7 +426,6 @@ public class MainActivity extends Activity {
         }
         return super.onPrepareOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
@@ -575,6 +583,7 @@ public class MainActivity extends Activity {
 
     }
 
+    // This function points to the name of the file on the Android Phone
     public String getFileName(Uri uri) {
         String result = null;
         if (uri.getScheme().equals("content")) {
