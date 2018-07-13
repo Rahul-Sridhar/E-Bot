@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- This class is the frontend for the acitivity which displays a message after checking for connection between Raspberry Pi and Android Phone -->
+<!-- This xml file is the frontend for the activity which displays a message after checking for connection between Raspberry Pi and Android Phone -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
