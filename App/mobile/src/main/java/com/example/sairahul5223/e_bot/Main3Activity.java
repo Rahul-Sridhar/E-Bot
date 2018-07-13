@@ -1,3 +1,7 @@
+/**
+ * This class is the backend for the acitivity which displays a message after checking for internet connection of Raspberry Pi and asking user if they would like the robot to come for a conversation
+ */
+
 package com.example.sairahul5223.e_bot;
 
 import android.app.Activity;
