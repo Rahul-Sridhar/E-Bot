@@ -1,3 +1,9 @@
+/**
+ *
+ * Each object of this class is a song on the playlist
+ *
+ */
+
 package com.example.sairahul5223.e_bot;
 
 public class Item {
