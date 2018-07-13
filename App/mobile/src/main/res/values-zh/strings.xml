@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- This file contains the chinese translation of all text in the app -->
+
 <resources>
     <string name="translation0">Ë-博特</string>
     <string name="translation1">输入您的首选语言</string>
