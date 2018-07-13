@@ -101,6 +101,7 @@ public class Main4Activity extends Activity {
         str10=getIntent().getStringExtra("help_number");
         Log.v("AsyncHTTPCheck", "Get returned: " + str10);
         music_indicator=getIntent().getStringExtra("music_indicator");
+        // Change layout of activity to be displayed initially based if this activity is shown after activity 3 or on pressing stop button on music player
         if(music_indicator.equals("0")==true) {
             new Main4Activity.httpAsyncTask42().execute();
             //Log.v("HTTP", "Get returned: " + String.valueOf(f/1000));
@@ -295,6 +296,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function checks for distance between robot and the user
     public class httpAsyncTask41 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -321,6 +323,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function is executed after robot stops on reaching close enough to the user
     public class httpAsyncTask411 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -354,6 +357,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // This function moves the robot towards the user
     public class httpAsyncTask42 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -380,6 +384,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function displays the start of conversation with user (based on their emotion)
     public class httpAsyncTask43 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -524,6 +529,7 @@ public class Main4Activity extends Activity {
     }
 
 
+    // This function instructs the robot to take a picture of the user
     public class httpAsyncTask44 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -551,6 +557,7 @@ public class Main4Activity extends Activity {
     }
 
 
+    // This function gets the image from Raspberry Pi and displays it as Bitmap on the app
     public class httpAsyncTask45 extends AsyncTask<String, Void, Bitmap>
     {
         @Override
@@ -583,6 +590,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function is executed at the end of conversation when the user enters 'No' when asked 'Can I go Now?' the second time
     public class httpAsyncTask46 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -616,6 +624,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function moves the robot backwards
     public class httpAsyncTask461 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -642,6 +651,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+     // This function moves the robot backwards
     public class httpAsyncTask462 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -675,6 +685,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function moves the robot left by 30 degrees
     public class httpAsyncTask47 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -701,6 +712,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function moves the robot right by 30 degrees
     public class httpAsyncTask48 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -724,6 +736,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function displays the continuation of the conversation with the user when they select a button 
     public class httpAsyncTask49 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -838,6 +851,8 @@ public class Main4Activity extends Activity {
 
     }
 
+    
+    // This function plays a song on the robot
     public class httpAsyncTask412 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -874,6 +889,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // This function plays a song on the robot
     public class httpAsyncTask4121 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -909,6 +925,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // The robot asks the user if they would like to call somebody, when this function is executed
     public class httpAsyncTask413 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -946,6 +963,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // The robot asks the user if they would like to call somebody, when this function is executed
     public class httpAsyncTask4131 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -985,6 +1003,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // The robot asks the user if they would like the robot to go, when this function is executed
     public class httpAsyncTask414 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -1022,6 +1041,8 @@ public class Main4Activity extends Activity {
 
     }
 
+    
+    // This function sets the language of communication for the robot
     public class httpAsyncTask415 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -1050,6 +1071,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // This function sends the name of the song to be deleted as a parameter of the URL
     public class httpAsyncTask416 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -1080,6 +1102,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // This function sends a song  from the Android Phone to the Raspberry Pi
     public class httpAsyncTask417 extends AsyncTask<String, Void, Void> {
 
 
@@ -1141,7 +1164,7 @@ public class Main4Activity extends Activity {
         }
     }
 
-
+    // This function is executed when 'Turn Left' button is selected  
     public void onButtonClickName41(View v){
         b41=findViewById(R.id.button43);
         b41.setBackgroundColor(Color.GRAY);
@@ -1213,6 +1236,7 @@ public class Main4Activity extends Activity {
         b41.setEnabled(true);
     }
 
+    // This function is executed when 'Turn Right' button is selected
     public void onButtonClickName42(View v){
         b41=findViewById(R.id.button43);
         b41.setBackgroundColor(Color.BLACK);
@@ -1284,7 +1308,7 @@ public class Main4Activity extends Activity {
         b42.setEnabled(true);
     }
 
-
+    // This function is executed when 'Start a conversation' is selected
     public void onButtonClickName43(View v){
         b41=findViewById(R.id.button43);
         b41.setBackgroundColor(Color.BLACK);
@@ -1358,6 +1382,7 @@ public class Main4Activity extends Activity {
         b43.setEnabled(true);
     }
 
+    // This function is executed when the mic button is selected under 'Look at me. Lets have a chat'
     public void onButtonClickName44(View v){
         b41=findViewById(R.id.button43);
         b41.setBackgroundColor(Color.BLACK);
@@ -1444,6 +1469,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // This function is executed when 'Try Again' button is selected which appears when there exists a problem in connection between Raspberry Pi and Android Phone
     public void onButtonClickName45(View v){
         b44=findViewById(R.id.button47);
         b44.setBackgroundColor(Color.BLACK);
@@ -1507,6 +1533,7 @@ public class Main4Activity extends Activity {
         b46.setEnabled(true);
     }
 
+    // This function is executed when the button on the left is selected right below the beginning of the conversation 
     public void onButtonClickName48(View v){
         b44=findViewById(R.id.button47);
         b44.setBackgroundColor(Color.GRAY);
@@ -1570,6 +1597,7 @@ public class Main4Activity extends Activity {
         b44.setEnabled(true);
     }
 
+    // This function is executed when the button on the left is selected right below the beginning of the conversation
     public void onButtonClickName49(View v){
         b44=findViewById(R.id.button47);
         b44.setBackgroundColor(Color.BLACK);
@@ -1633,6 +1661,7 @@ public class Main4Activity extends Activity {
         b45.setEnabled(true);
     }
 
+    // This function is executed when 'Yes' button is selected when 'Would you like me to stay?' is asked
     public void onButtonClickName411(View v){
         b47=findViewById(R.id.button411);
         b47.setBackgroundColor(Color.GRAY);
@@ -1680,6 +1709,7 @@ public class Main4Activity extends Activity {
         b47.setEnabled(true);
     }
 
+    // This function is executed when mic button is selected when 'Would you like me to stay?' is asked 
     public void onButtonClickName412(View v){
         b47=findViewById(R.id.button411);
         b47.setBackgroundColor(Color.BLACK);
@@ -1732,6 +1762,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // This function is executed when 'No' button is selected when 'Would you like me to stay?' is asked 
     public void onButtonClickName413(View v){
         b47=findViewById(R.id.button411);
         b47.setBackgroundColor(Color.BLACK);
@@ -1779,6 +1810,7 @@ public class Main4Activity extends Activity {
         b48.setEnabled(true);
     }
 
+    // This function is executed when 'Yes' button is selected when 'Should I play a song for you?' is asked 
     public void onButtonClickName414(View v){
         str9="0";
         b49=findViewById(R.id.button414);
@@ -1873,6 +1905,7 @@ public class Main4Activity extends Activity {
         b49.setEnabled(true);
     }
 
+    // This function is executed when mic button is selected when 'Should I play a song for you?' is asked 
     public void onButtonClickName415(View v){
         b49=findViewById(R.id.button414);
         b49.setBackgroundColor(Color.BLACK);
@@ -1918,6 +1951,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function is executed when 'No' button is selected when 'Should I play a song for you?' is asked 
     public void onButtonClickName416(View v){
         b49=findViewById(R.id.button414);
         b49.setBackgroundColor(Color.BLACK);
@@ -1951,6 +1985,7 @@ public class Main4Activity extends Activity {
         new Main4Activity.httpAsyncTask4131().execute();
     }
 
+    // This function is executed when 'Yes' button is selected when 'Should I call for help?' is asked 
     public void onButtonClickName417(View v){
         b411=findViewById(R.id.button417);
         b411.setBackgroundColor(Color.GRAY);
@@ -1976,6 +2011,7 @@ public class Main4Activity extends Activity {
         b411.setEnabled(true);
     }
 
+    // This function is executed when mic button is selected when 'Should I call for help?' is asked 
     public void onButtonClickName418(View v){
         b411=findViewById(R.id.button417);
         b411.setBackgroundColor(Color.BLACK);
@@ -2015,6 +2051,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function is executed when 'No' button is selected when 'Should I call for help?' is asked 
     public void onButtonClickName419(View v){
         b411=findViewById(R.id.button417);
         b411.setBackgroundColor(Color.BLACK);
@@ -2039,6 +2076,7 @@ public class Main4Activity extends Activity {
         b412.setEnabled(true);
     }
 
+    // This function is executed when 'Yes' button is selected when 'Can I go Now?' is asked 
     public void onButtonClickName420(View v){
         b413=findViewById(R.id.button420);
         b413.setBackgroundColor(Color.GRAY);
@@ -2053,6 +2091,7 @@ public class Main4Activity extends Activity {
         b413.setEnabled(true);
     }
 
+    // This function is executed when mic button is selected when 'Can I go Now?' is asked
     public void onButtonClickName421(View v){
         b413=findViewById(R.id.button420);
         b413.setBackgroundColor(Color.BLACK);
@@ -2080,6 +2119,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function is executed when 'No' button is selected when 'Can I go Now?' is asked
     public void onButtonClickName422(View v){
         b413=findViewById(R.id.button420);
         b413.setBackgroundColor(Color.BLACK);
@@ -2095,6 +2135,7 @@ public class Main4Activity extends Activity {
     }
 
 
+    // Override the method for execution of back button twice
     Boolean doubleBackPressed=false;
     @Override
     public void onBackPressed() {
@@ -2116,6 +2157,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // Override function which executes a set of statements based on voice input from the user
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -2611,6 +2653,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // This function return the translated text
     private String translator_return(int b){
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
@@ -2618,6 +2661,7 @@ public class Main4Activity extends Activity {
         return str20;
     }
 
+    // This function return the translated text in English
     private String translator_return1(int b){
         Context context = LocaleHelper.setLocale(this, "en");
         Resources resources = context.getResources();
@@ -2633,6 +2677,7 @@ public class Main4Activity extends Activity {
         myText41.setText(String.format(resources.getString(R.string.translation18), user_name41));
     }
 
+    // Converts the text to the given language and displays it
     private void translator(int a, int b, String help){
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
@@ -2648,6 +2693,7 @@ public class Main4Activity extends Activity {
         }
     }
 
+    // Displays the text based on the language set as soon as the activity appears on the app
     private void updateViews() {
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
@@ -2716,13 +2762,13 @@ public class Main4Activity extends Activity {
 
     }
 
+    // Override methods for the working of settings (Edit Language, Edit Playlist, Edit Help number) 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.settings_menu, menu);
         return true;
     }
-
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         if(Build.VERSION.SDK_INT > 11) {
@@ -2733,7 +2779,6 @@ public class Main4Activity extends Activity {
         }
         return super.onPrepareOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
@@ -2893,6 +2938,7 @@ public class Main4Activity extends Activity {
 
     }
 
+    // This function points to the name of the file on the Android Phone
     public String getFileName(Uri uri) {
         String result = null;
         if (uri.getScheme().equals("content")) {
