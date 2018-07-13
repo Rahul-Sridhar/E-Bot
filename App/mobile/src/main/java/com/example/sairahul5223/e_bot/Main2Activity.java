@@ -1,5 +1,5 @@
 /**
- * This class is the backend for the acitivity which displays a message after checking for connection between Raspberry Pi and Android Phone
+ * This class is the backend for the activity which displays a message after checking for connection between Raspberry Pi and Android Phone
  */
 
 package com.example.sairahul5223.e_bot;
