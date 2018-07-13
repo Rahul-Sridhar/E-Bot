@@ -1,3 +1,9 @@
+/**
+ * 
+ * This class is the backend for the activity for music player
+ * 
+ */
+
 package com.example.sairahul5223.e_bot;
 
 import android.app.Activity;
