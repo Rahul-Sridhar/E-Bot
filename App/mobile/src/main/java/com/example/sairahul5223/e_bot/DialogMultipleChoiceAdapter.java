@@ -1,3 +1,8 @@
+/**
+ *
+ * This class is the adapter for the playlist on the alert dialog box
+ *
+ */
 package com.example.sairahul5223.e_bot;
 
 import android.content.Context;
