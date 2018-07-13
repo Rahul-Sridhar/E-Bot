@@ -1,3 +1,9 @@
+/**
+ * 
+ * This class is the backend for the activity which takes the language preference from the user
+ * 
+ */
+
 package com.example.sairahul5223.e_bot;
 
 import android.Manifest;
