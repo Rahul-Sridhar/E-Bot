@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- This file contains the english translation of all text in the app -->
+
 <resources>
     <string name="translation0">E-Bot</string>
     <string name="translation1">Enter your preferred language</string>
