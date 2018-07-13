@@ -74,6 +74,7 @@ public class Main5Activity extends Activity {
     }
 
 
+    // This function sets the language of communication for the robot
     public class httpAsyncTask51 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -102,6 +103,7 @@ public class Main5Activity extends Activity {
 
     }
 
+    // This is function is executed when 'English' button is selected
     public void onButtonClickName51(View v){
         b51=findViewById(R.id.button51);
         b51.setBackgroundColor(Color.GRAY);
@@ -122,6 +124,7 @@ public class Main5Activity extends Activity {
         b51.setEnabled(true);
     }
 
+    // This is function is executed when mic button is selected
     public void onButtonClickName52(View v){
         b51=findViewById(R.id.button51);
         b51.setBackgroundColor(Color.BLACK);
@@ -141,6 +144,7 @@ public class Main5Activity extends Activity {
         }
     }
 
+    // This is function is executed when 'Chinese' button is selected
     public void onButtonClickName53(View v){
         b51=findViewById(R.id.button51);
         b51.setBackgroundColor(Color.BLACK);
@@ -161,6 +165,7 @@ public class Main5Activity extends Activity {
         b52.setEnabled(true);
     }
 
+    // Override function which executes a set of statements based on voice input from the user
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -234,6 +239,7 @@ public class Main5Activity extends Activity {
         super.attachBaseContext(LocaleHelper.onAttach(base));
     }
 
+    // Displays the text based on the language set as soon as the activity appears on the app
     private void updateViews() {
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
