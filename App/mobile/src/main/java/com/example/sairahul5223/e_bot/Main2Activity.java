@@ -339,6 +339,7 @@ public class Main2Activity extends Activity {
         }
     }
 
+    // Override function which executes a set of statements based on voice input from the user
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -546,7 +547,7 @@ public class Main2Activity extends Activity {
 
     }
 
-    // This funnction points to the name of the file on the Android Phone
+    // This function points to the name of the file on the Android Phone
     public String getFileName(Uri uri) {
         String result = null;
         if (uri.getScheme().equals("content")) {
