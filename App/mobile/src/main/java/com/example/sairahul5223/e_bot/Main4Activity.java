@@ -1,3 +1,9 @@
+/**
+ * 
+ * This class is the backend for the activity in which conversation with user is displayed
+ * 
+ */
+
 package com.example.sairahul5223.e_bot;
 
 import android.Manifest;
