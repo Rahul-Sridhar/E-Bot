@@ -70,6 +70,7 @@ public class Music_player1 extends Activity {
         getWindow().setLayout((int)(width*.8), (int)(height*.2));
     }
 
+    // This function on execution plays a song on the robot
     public class httpAsyncTask1 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -105,6 +106,7 @@ public class Music_player1 extends Activity {
 
     }
 
+    // This function on execution stops a song on the robot
     public class httpAsyncTask2 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -156,6 +158,7 @@ public class Music_player1 extends Activity {
 
     }
 
+    // This function on execution pauses a song on the robot
     public class httpAsyncTask3 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -190,6 +193,7 @@ public class Music_player1 extends Activity {
 
     }
 
+    // This function on execution plays the next and previous song on the playlist on the robot
     public class httpAsyncTask4 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -225,6 +229,7 @@ public class Music_player1 extends Activity {
 
     }
 
+    // This function is executed when the previous button on the music player is selected
     public void prev(View v){
         ImageView iv1=findViewById(R.id.music_previous);
         iv1.setColorFilter(Color.GRAY, PorterDuff.Mode.LIGHTEN);
@@ -247,6 +252,7 @@ public class Music_player1 extends Activity {
         new httpAsyncTask4().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
+    // This function is executed when the stop button on the music player is selected
     public void stop(View v){
         ImageView iv1=findViewById(R.id.music_previous);
         iv1.clearColorFilter();
@@ -262,6 +268,7 @@ public class Music_player1 extends Activity {
         iv2.clearColorFilter();
     }
 
+    // This function is executed when the play button on the music player is selected
     public void play(View v){
         ImageView iv1=findViewById(R.id.music_previous);
         iv1.clearColorFilter();
@@ -276,6 +283,7 @@ public class Music_player1 extends Activity {
         new httpAsyncTask1().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
+    // This function is executed when the pause button on the music player is selected
     public void pause(View v){
         ImageView iv1=findViewById(R.id.music_previous);
         iv1.clearColorFilter();
@@ -290,6 +298,7 @@ public class Music_player1 extends Activity {
         new httpAsyncTask3().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
+    // This function is executed when the next button on the music player is selected
     public void next(View v){
         ImageView iv1=findViewById(R.id.music_previous);
         iv1.clearColorFilter();
