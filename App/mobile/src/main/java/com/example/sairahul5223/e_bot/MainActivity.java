@@ -1,3 +1,9 @@
+/**
+ * 
+ * This class is the backend for the activity which takes in the name of the user
+ * 
+ */
+
 package com.example.sairahul5223.e_bot;
 
 import android.Manifest;
