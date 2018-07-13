@@ -71,6 +71,7 @@ public class Main3Activity extends Activity {
         updateViews();
     }
 
+    // This function is executed when 'Yes' button is selected 
     public void onButtonClickName31(View v){
         b31=findViewById(R.id.button34);
         b31.setBackgroundColor(Color.GRAY);
@@ -90,6 +91,7 @@ public class Main3Activity extends Activity {
         b31.setEnabled(true);
     }
 
+    // This function is selected when 'No' button is selected. It opens an alert dialog for confirmation. 
     public void onButtonClickName32(View v){
         b31=findViewById(R.id.button34);
         b31.setBackgroundColor(Color.BLACK);
@@ -152,6 +154,7 @@ public class Main3Activity extends Activity {
         startActivity(myIntent32);*/
     }
 
+    // This function get executed when the mic button is selected and user inputs through voice
     public void onButtonClickName33(View v){
         ImageView iv1=findViewById(R.id.speaker_button);
         iv1.setColorFilter(Color.GRAY, PorterDuff.Mode.LIGHTEN);
@@ -175,12 +178,14 @@ public class Main3Activity extends Activity {
 
     }
 
+    // Override function which is executed when back button of Android Phone is selected
     @Override
     public void onBackPressed() {
         Intent myIntent33= new Intent(getBaseContext(), MainActivity.class);
         startActivity(myIntent33);
     }
 
+    // Override function which executes a set of statements based on voice input from the user
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -290,6 +295,7 @@ public class Main3Activity extends Activity {
         }
     }
 
+    // This function return the translated text
     private String translator_return(int b){
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
@@ -297,6 +303,7 @@ public class Main3Activity extends Activity {
         return str20;
     }
 
+    // Displays the text based on the language set as soon as the activity appears on the app
     private void updateViews() {
         Context context = LocaleHelper.setLocale(this, language_code);
         Resources resources = context.getResources();
@@ -314,6 +321,7 @@ public class Main3Activity extends Activity {
         setTitle(resources.getString(R.string.main_activity_toolbar_title));
     }
 
+    // This function sets the language of communication for the robot
     public class httpAsyncTask415 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -342,6 +350,7 @@ public class Main3Activity extends Activity {
 
     }
 
+    // This function sends the name of the song to be deleted as a parameter of the URL
     public class httpAsyncTask416 extends AsyncTask<String, Void, Void>
     {
         @Override
@@ -372,6 +381,7 @@ public class Main3Activity extends Activity {
 
     }
 
+    // This function sends a song  from the Android Phone to the Raspberry Pi
     public class httpAsyncTask417 extends AsyncTask<String, Void, Void> {
 
 
@@ -433,13 +443,13 @@ public class Main3Activity extends Activity {
         }
     }
 
+    // Override methods for the working of settings (Edit Language, Edit Playlist, Edit Help number)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.settings_menu, menu);
         return true;
     }
-
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         if(Build.VERSION.SDK_INT > 11) {
@@ -450,7 +460,6 @@ public class Main3Activity extends Activity {
         }
         return super.onPrepareOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
@@ -608,6 +617,7 @@ public class Main3Activity extends Activity {
 
     }
 
+    // This function points to the name of the file on the Android Phone
     public String getFileName(Uri uri) {
         String result = null;
         if (uri.getScheme().equals("content")) {
